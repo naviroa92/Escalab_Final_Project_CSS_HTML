@@ -1,0 +1,592 @@
+:root{
+    --typewsriterSpeed: 4s;
+    --typewriterCharacters: 15;
+}
+
+@font-face{
+    font-family:'adinenue PRO-REGULAR';
+    src:url('../Fonts/adineuePRO-Regular.otf')
+}
+
+@font-face{
+    font-family:'adinenue PRO-BOLD';
+    src:url('../Fonts/adineuePRO-Bold.otf')
+}
+
+@font-face{
+    font-family:'adinenue PRO-LIGHT';
+    src:url('../Fonts/adineuePRO-Light.otf')
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    /*outline: 1px solid red;*/
+}
+
+body{
+    background-color:#323647;
+}
+
+.general_container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.menu{
+    width: 1920px;
+    height:150px;
+    background-color: #323647;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn{
+    position: relative;
+    font-family:'adinenue PRO-REGULAR';
+    font-size: 20pt;
+    color: rgba(255, 255, 225, 0.44);
+    margin: 50px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btn:after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:#40E0D0;
+    left: 50%;
+    bottom: 0;
+    transform: scale(0,1);
+    transition: transform 0.1s ease;
+}
+
+.btn:hover{
+    color: white;
+}
+.btn:hover::after{
+    transform: scale(1,1);
+}
+
+.aboutContainer{
+    width: 1920px;
+    height: 770px;
+    background-color: #323647;
+    display: flex;
+    flex-direction: row;
+}
+
+.container1{
+    width: 50%;
+    height: 100%;
+}
+
+.TypewriterEfect{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ivanAnimation{
+    font-family:'adinenue PRO-BOLD',monospace;
+    font-size: 120px;
+    color: white;
+    position: relative;
+}
+
+.ivanAnimation::before,
+.ivanAnimation::after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.ivanAnimation::before{
+    background:  #323647;
+    animation:typewriter var(--typewsriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.ivanAnimation::after{
+    width: 0.08em;
+    height: 120px;
+    border-radius: 50px;
+    background: #40E0D0;
+    animation:typewriter var(--typewsriterSpeed)steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+
+}
+
+@keyframes typewriter{
+    to{ left: 100%;
+    }
+}
+
+@keyframes blink{
+    to{
+        background: transparent;
+    }
+}
+
+.welcome{
+    font-family:'adinenue PRO-REGULAR';
+    font-size: 30pt;
+    color: rgba(255, 255, 225, 0.44);
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewsriterSpeed) + 2s) forwards;
+
+}
+
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.socialMedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 200px;
+}
+
+.icon{
+    margin: 0px 20px 0px 20px;
+}
+
+.container2{
+    width: 30%;
+    height: 100%;
+    background-color: #323647;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+
+}
+
+.title{
+    color: #40E0D0;
+    font-family: 'adinenue PRO-REGULAR';
+    letter-spacing: 0.2rem;
+    font-size: 29px;
+    margin-left: 50px;
+}
+
+.subtitle{
+    color: white;
+    font-family: 'adinenue PRO-REGULAR';
+    font-size: 35px;
+    margin-left: 50px;
+
+}
+
+.paragrahp{
+    color: #AEB1BB;
+    font-family: 'adinenue PRO-REGULAR';
+    font-size: 22px;
+    margin: 0px 100px 0px 50px;
+
+}
+
+.link{
+    color: #40E0D0;
+    font-family: 'adinenue PRO-LIGHT';
+    margin-left: 50px;
+    font-size: 25PX;
+
+}
+
+.container3{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.labels{
+    margin-right: 50px;
+}
+
+.experienceContainer{
+    width: 1920px;
+    height: 937px;
+    background-image:url(../img/Background_Experience.png);
+    border: none;
+}
+
+.contact{
+    width:100%;
+    height:60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container4{
+    margin-left: 160px;
+    width:41.5%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.container5{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+    padding-top: 10px;
+    row-gap: 20px;
+}
+
+.subcontainer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
+    row-gap: 10px;
+}
+
+.experience2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.numExperience{
+    color:#40E0D0;
+    animation: counter 5s infinite alternate ease-in-out;
+    counter-reset: num var(--num);
+    font: 800 50px system-ui;
+    margin-left: 50px;
+}
+.numExperience::after {
+    content: counter(num);
+}
+
+@keyframes counter {
+    from {
+        --num: 0;
+    }
+    to {
+        --num: 8;
+    }
+}
+
+.clients2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@property --num2{
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.numClients{
+    color:#40E0D0;
+    animation: counter2 5s infinite alternate ease-in-out;
+    counter-reset: num var(--num2);
+    font: 800 50px system-ui;
+    margin-left: 50px;
+}
+.numClients::after {
+    content: counter(num);
+}
+
+@keyframes counter2{
+    from {
+        --num2: 0;
+    }
+    to {
+        --num2: 83;
+    }
+}
+
+.skills{
+    width:100%;
+    height:40%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.box{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #323647;
+    border: solid 4px #40E0D0;
+    box-shadow: 0px 0px 5px 5px rgba(64, 224, 208, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box:hover{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(64, 224, 208, 0.5);
+}
+
+.nameSkill{
+    color: white;
+    font-family: 'adinenue PRO-REGULAR';
+    font-size: 22px;
+}
+
+.numData{
+    color: #AEB1BB;
+    font-family: 'adinenue PRO-LIGHT';
+    font-size: 22px;
+}
+
+.projectsContainer{
+    width: 1920px;
+    height: 937px;
+    background-image:url(../img/Background_Projects.png);
+    display: flex;
+    flex-direction: row;
+}
+
+.description{
+    max-width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+    row-gap: 40px;
+}
+
+.portfolio{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.portfolioElement{
+    width:250px;
+    height: 250px;
+    border-radius: 20px;
+    border: solid 3px #40E0D0;
+}
+
+.imgElement{
+    border-radius: 20px;
+}
+
+.portfolioElement > figure > img{
+    border-radius: 20px;
+}
+
+.portfolioElement figure {
+	background: #1abc9c;
+    border-radius: 20px;
+}
+.portfolioElement figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.portfolioElement figure:hover img {
+	opacity: .5;
+}
+
+.contactContainer{
+    width: 1920px;
+    height: 937px;
+    background-image:url(../img/Background_contact.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+
+
+}
+
+.formulario{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.subtitleForm{
+    color: white;
+    font-family: 'adinenue PRO-REGULAR';
+    font-size: 25px;
+}
+
+.inputBox{
+    background-color: #323647;
+    border: none;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    font-family:'adinenue PRO-LIGHT';
+    font-size: 20px;
+    text-align: center;
+}
+
+.btnSubmit{
+    width: 100px;
+    height: 30px;
+    background-color: #1abc9c;
+    border:none;
+    border-radius: 20px;
+    font-family:'adinenue PRO-BOLD';
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1480px){
+    .listBtn{
+        display: none;
+    }
+
+    .menu{
+        justify-content: center;
+    }
+
+    .aboutContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+    }
+
+    .container2{
+        margin: 50px;
+    }
+
+    .container3{
+        display: none;
+    }
+
+    .socialMedia{
+        justify-content: center;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .experienceContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container4{
+        width: 30%;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .container5{
+        width: 30%;
+        margin: 20px 0px 0px 0px;
+        padding: 0px;
+
+    }
+
+    .skills{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .box{
+        margin: 20px;
+    }
+
+    .projectsContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .description{
+        width: 30%;
+        margin:0px;
+        margin: 20px;
+    }
+
+    .portfolio{
+        width: 30%;
+        margin: 50px;
+    }
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.element{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.success{
+    border: 1px solid greenyellow;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.paragrahp2{
+    color:white;
+    font-family: 'adinenue PRO-REGULAR';
+    font-size: 22px;
+}
